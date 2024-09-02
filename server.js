@@ -14,7 +14,7 @@ const { connectDB } = require("./utils/db");
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: process.env.FRONTEND_URL,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
     credentials: true,
